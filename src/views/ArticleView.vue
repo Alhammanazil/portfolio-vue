@@ -11,13 +11,14 @@
                             alt="Thumbnail">
                     </div>
                 </div>
-                <div class="text-left text-black mt-8" v-html="content">
-                    
+                <div class="text-left text-black mt-8">
+                    <p v-for="(paragraph, index) in content" :key="index" v-html="paragraph"></p>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
 <script>
 import axios from 'axios';
 import { useRoute } from 'vue-router';
@@ -29,7 +30,7 @@ export default {
             title: '',
             image: '',
             date: '',
-            content: '',
+            content: [],
         }
     },
     mounted() {
@@ -38,16 +39,21 @@ export default {
     methods: {
         async getDetails() {
             const id = this.route.params.id;
-            axios.get('https://64a38c9cc3b509573b564183.mockapi.io/api/blog/all/' + id)
+            axios.get('https://64c6587e0a25021fde918c22.mockapi.io/api/blog/' + id)
                 .then(response => {
                     this.title = response.data.title;
                     this.image = response.data.image;
                     this.date = response.data.date;
-                    this.content = response.data.content;
+                    this.content = response.data.content.split('\n\n'); // Assuming content has double line breaks to indicate paragraphs
                 })
         }
     }
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+/* Add some bottom margin to paragraphs for the desired spacing */
+.text-black p {
+    margin-bottom: 2em;
+}
+</style>

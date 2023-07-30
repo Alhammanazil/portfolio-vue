@@ -6,48 +6,39 @@ export default {
       items: [
         {
           id: 1,
-          name: 'Personal Website',
-          imageUrl: 'portfolio_v2',
-          status: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
-          tech: 'VueJS 3, Tailwind',
-          github: 'https://github.com/rakha-elctrnx/Portofolio-v2',
-          demo: 'https://bagasrakha.netlify.app/'
+          name: 'Jejaknesia App',
+          imageUrl: 'jejaknesia',
+          status: 'A mobile application that helps recommend tourist attractions in Indonesia according to selected preferences.',
+          tech: 'NodeJs, Python, Hapi, Kotlin',
+          github: 'https://github.com/Jejaknesia',
+          demo: 'null'
         },
         {
           id: 2,
-          name: 'Sahabat Muslim',
-          imageUrl: 'sahabatmuslim',
-          status: 'A website that has a responsive display to make it easier for Muslims to read the Quran from anywhere.',
-          tech: 'VueJS 3, Tailwind',
-          github: 'https://github.com/rakha-elctrnx/muslim-companion',
-          demo: 'https://sahabat-muslim.netlify.app/'
+          name: 'Personal Branding',
+          imageUrl: 'portfolio',
+          status: 'My personal branding website, I created this website to display my profile, skills and contact.',
+          tech: 'Html, CSS, Javascript, Bootstrap',
+          github: 'https://github.com/Alhammanazil/portfolio',
+          demo: 'https://alhammanazil.netlify.app/'
         },
         {
           id: 3,
-          name: 'SISTEKDES',
-          imageUrl: 'sistekdes',
-          status: 'Sistem Informasi dan Teknologi Desa, a web application to assist village government work in administration, population data management, community services, etc.',
-          tech: 'Laravel 9, Bootstrap',
-          github: 'null',
-          demo: 'null'
+          name: 'Kota Kudus',
+          imageUrl: 'kota-kudus',
+          status: 'Simple static web about the history, geography, tourism and culinary in kudus city.',
+          tech: 'Html, CSS',
+          github: 'https://github.com/Alhammanazil/kota-kudus',
+          demo: 'https://kudus-city.netlify.app/'
         },
         {
           id: 4,
-          name: 'Bumdesma',
-          imageUrl: 'bumdesma',
-          status: 'a web application used by village-owned enterprises at the sub-district level to make it easier for them in terms of accounting that is equipped with a microfinance balance.',
-          tech: 'Laravel 8, Bootstrap',
-          github: 'null',
-          demo: 'null'
-        },
-        {
-          id: 5,
-          name: 'SP2SE',
-          imageUrl: 'sp2se',
-          status: 'Sistem Percepatan Pelayanan Surat Elektronik, A web application to manage letters in the village.',
-          tech: 'Codeigniter 3, Bootstrap',
-          github: 'null',
-          demo: 'null'
+          name: 'TourGuide',
+          imageUrl: 'tourguide',
+          status: 'Static website about tourguide',
+          tech: 'Html, Bootstrap',
+          github: 'https://github.com/Alhammanazil/Tourguide',
+          demo: 'https://tourguideweb.netlify.app/'
         }
       ]
     };
