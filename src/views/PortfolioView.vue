@@ -48,6 +48,15 @@ export default {
           tech: 'Html, CSS, Javascript',
           github: 'https://github.com/Alhammanazil/bookshelf-app.git',
           demo: 'https://bookshelf-alhammanazil.netlify.app/'
+        },
+        {
+          id: 6,
+          name: 'Vueshop',
+          imageUrl: 'vueshop',
+          status: 'Vueshop is a web for selling goods that utilises the price filter feature based on your own preferences and there is also checkout feature.',
+          tech: 'Bootstrap, Vue.js',
+          github: 'https://github.com/Alhammanazil/vue-cli',
+          demo: 'https://vueshop-js.netlify.app/'
         }
       ]
     };
