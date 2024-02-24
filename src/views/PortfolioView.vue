@@ -57,7 +57,16 @@ export default {
           tech: 'Bootstrap, Vue.js',
           github: 'https://github.com/Alhammanazil/vue-cli',
           demo: 'https://vueshop-js.netlify.app/'
-        }
+        },
+        {
+          id: 7,
+          name: 'Jobless',
+          imageUrl: 'jobless',
+          status: 'Discover a wide range of remote opportunities and get hired by top companies.',
+          tech: 'Slicing UI, Figma, HTML, CSS',
+          github: 'https://github.com/Alhammanazil/Jobless.git',
+          demo: 'https://jobless-site.netlify.app/'
+        },
       ]
     };
   }
