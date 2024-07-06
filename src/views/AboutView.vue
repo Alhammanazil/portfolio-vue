@@ -99,18 +99,20 @@ export default {
       <section
         class="text-sm md:text-lg text-justify flex flex-col gap-4 md:flex-row md:gap-8 md:justify-left md:items-center">
         <div class="flex justify-center">
-          <img class="w-9/12 rounded-full mb-3 fadein-up"
-            src="https://storage.googleapis.com/somethingidk/Alham.png" alt="Foto">
+          <img class="w-6/12 rounded-full mb-3 fadein-up" src="https://storage.googleapis.com/just_data/jiro.png" alt="Foto">
         </div>
         <div class="md:w-7/12">
           <p class="mb-3 md:mb-7 fadein-left fadeins-1">
-            &nbsp; &nbsp; &nbsp; Hi everyone! My name is Alham Manazil. I am a web developer from Kudus, Central Java. I have 5 months of learning experience from Bangkit Academy especially in the field of google cloud and back-end development, I am also interested in graphic design.
+            &nbsp; &nbsp; &nbsp; Hi everyone! My name is Alham Manazil. I am a web developer from Kudus, Central Java. I
+            have 5 months of learning experience from Bangkit Academy especially in the field of google cloud and
+            back-end development, I am also interested in graphic design.
             I really enjoy what I do right now, in my opinion, creating programs is not just a job, but also an art that
             has
             aesthetic value
           </p>
           <p class="mb-3 fadein-left fadeins-2">
-            &nbsp; &nbsp; &nbsp; My job is to build your website to be functional and user-friendly yet still attractive.
+            &nbsp; &nbsp; &nbsp; My job is to build your website to be functional and user-friendly yet still
+            attractive.
             In addition, I provide a personal touch to your product and ensure that the website catches attention and is
             easy to use.
             My goal is to convey your message and identity in the most creative way. If you are interested in hiring me,
@@ -137,11 +139,13 @@ export default {
           <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400 mb-5">
             <li class="mr-2">
               <button class="inline-block px-4 py-3 rounded-lg hover:text-white"
-                :class="{ 'text-amber-200 bg-amber-200 bg-opacity-10': activeTab === 1 }" @click="activeTab = 1">Tech Stack</button>
+                :class="{ 'text-amber-200 bg-amber-200 bg-opacity-10': activeTab === 1 }" @click="activeTab = 1">Tech
+                Stack</button>
             </li>
             <li class="mr-2">
               <button class="inline-block px-4 py-3 rounded-lg hover:text-white"
-                :class="{ 'text-amber-200 bg-amber-200 bg-opacity-10': activeTab === 2 }" @click="activeTab = 2">Tools</button>
+                :class="{ 'text-amber-200 bg-amber-200 bg-opacity-10': activeTab === 2 }"
+                @click="activeTab = 2">Tools</button>
             </li>
           </ul>
         </div>
@@ -156,7 +160,8 @@ export default {
                     :src="item.imageUrl" style="color: transparent;">
                 </div>
                 <div class="flex items-center text-sm md:text-base lg:text-lg">
-                  <div class="tech font-medium text-secondary transition-all duration-300 translate-y-0 ">{{ item.name }}
+                  <div class="tech font-medium text-secondary transition-all duration-300 translate-y-0 ">{{ item.name
+                    }}
                   </div>
                   <div
                     class="status-tech opacity-0 absolute mt-5 text-[10px] text-amber-200 transition-all duration-300 md:text-xs lg:text-sm">
@@ -177,7 +182,8 @@ export default {
                     :src="item.imageUrl" style="color: transparent;">
                 </div>
                 <div class="flex items-center text-sm md:text-base lg:text-lg">
-                  <div class="tech font-medium text-secondary transition-all duration-300 translate-y-0 ">{{ item.name }}
+                  <div class="tech font-medium text-secondary transition-all duration-300 translate-y-0 ">{{ item.name
+                    }}
                   </div>
                   <div
                     class="status-tech opacity-0 absolute mt-5 text-[10px] text-amber-200 transition-all duration-300 md:text-xs lg:text-sm">
