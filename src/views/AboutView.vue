@@ -99,7 +99,7 @@ export default {
       <section
         class="text-sm md:text-lg text-justify flex flex-col gap-4 md:flex-row md:gap-8 md:justify-left md:items-center">
         <div class="flex justify-center">
-          <img class="w-6/12 rounded-full mb-3 fadein-up" src="https://storage.googleapis.com/just_data/profile.jpeg" alt="Foto">
+          <img class="w-6/12 rounded-full mb-3 fadein-up" src="https://i.ibb.co.com/m6bngRc/Alham-Manazil.png" alt="Foto">
         </div>
         <div class="md:w-7/12">
           <p class="mb-3 md:mb-7 fadein-left fadeins-1">
