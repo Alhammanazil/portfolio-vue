@@ -1,34 +1,34 @@
 <template>
   <!-- component -->
   <!-- This is an example component -->
-  <div class="max-w-7xl mx-auto flex flex-col relative">
+  <div class="relative flex flex-col mx-auto max-w-7xl">
 
     <nav class="max-w-7xl px-5 md:fixed top-0 z-[98] w-screen backdrop-blur-md bg-[#121212] bg-opacity-80">
-      <div class="container mx-auto flex flex-wrap items-center justify-between">
+      <div class="container flex flex-wrap items-center justify-between mx-auto">
         <button @click="redirectToHome" class="flex">
           <span class="self-center text-lg text-[#ffdb70] font-semibold whitespace-nowrap fadein-bot hover:text-amber-100">Alham Manazil</span>
         </button>
         <div class="flex md:order-2 fadein-bot">
-          <a href="https://github.com/Alhammanazil"><img class="w-9 rounded-full" src="https://seeklogo.com/images/G/github-logo-2E3852456C-seeklogo.com.png" alt="github"></a>
+          <a href="https://github.com/Alhammanazil"><img class="rounded-full w-9" src="https://img.icons8.com/glyph-neue/512/FFFFFF/github.png" alt="github"></a>
         </div>
-        <div class="hidden md:flex justify-between items-center w-full md:w-auto md:order-1" id="mobile-menu-3">
-          <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-3">
+          <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
               <router-link to="/"
-                class="fadein-bot text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0"
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 fadein-bot hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 md:p-0"
                 aria-current="page">Home</router-link>
             </li>
             <li>
               <router-link to="/about"
-                class="fadein-bot fadein-1 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">About</router-link>
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 fadein-bot fadein-1 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 md:p-0">About</router-link>
             </li>
             <li>
               <router-link to="/portfolio"
-                class="fadein-bot fadein-2 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">Portfolio</router-link>
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 fadein-bot fadein-2 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 md:p-0">Portfolio</router-link>
             </li>
             <li>
               <router-link to="/blog"
-                class="fadein-bot fadein-3 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0 blog">Blog</router-link>
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 fadein-bot fadein-3 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 md:p-0 blog">Blog</router-link>
             </li>
           </ul>
         </div>

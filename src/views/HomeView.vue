@@ -1,21 +1,35 @@
 <template>
   <main
     class="mt-10 md:mt-1 flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[80vh]">
-    <div class="space-y-2 text-center md:text-left px-10">
-      <p class="text-amber-200">Hello Friend, I'm</p>
-      <h1 class="text-4xl font-bold md:text-5xl text-white fadein-up">Alham Manazil</h1>
+    <div class="px-10 space-y-2 text-center md:text-left">
+      <p class="text-amber-200">Hi, my name is</p>
+      <h1 class="text-4xl font-bold text-white md:text-5xl fadein-up">Alham Manazil</h1>
       <div class="py-2">
         <h1
-          class="typewrite text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-yellow-500 md:text-2xl fadein-up"
+          class="text-xl font-semibold text-transparent typewrite bg-clip-text bg-gradient-to-r from-slate-100 to-yellow-500 md:text-2xl fadein-up"
           ref="typewriter">
           <span class="wrap">{{ txt }}</span>
         </h1>
       </div>
-      <p class="text-white pr-4 fade-in-from-left">Welcome to My personal website. <span class="wave">👋🏼</span></p>
       <br>
+      <!-- Ganti Linktree dengan ikon sosial media -->
+      <div class="flex justify-center gap-4 mt-2 md:justify-start">
+        <a href="https://www.instagram.com/alham_manazil" target="_blank" rel="noopener" title="Instagram" class="sosmed-icon">
+          <img src="https://img.icons8.com/ios-filled/28/ffdb70/instagram-new.png" alt="Instagram" />
+        </a>
+        <a href="https://www.linkedin.com/in/alham-manazil" target="_blank" rel="noopener" title="LinkedIn" class="sosmed-icon">
+          <img src="https://img.icons8.com/ios-filled/28/ffdb70/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/Alhammanazil" target="_blank" rel="noopener" title="GitHub" class="sosmed-icon">
+          <img src="https://img.icons8.com/ios-glyphs/28/ffdb70/github.png" alt="GitHub" />
+        </a>
+        <a href="https://www.goodreads.com/user/show/188713225-alham-manazil" target="_blank" rel="noopener" title="Goodreads" class="sosmed-icon">
+          <img src="https://img.icons8.com/ios-filled/28/ffdb70/goodreads.png" alt="Goodreads" />
+        </a>
+      </div>
       <!-- <button
         class="fadein-bot fade-500 flex items-center py-2 px-4 mx-auto text-sm font-medium rounded-lg border transition duration-300 md:py-2.5 md:px-5 md:mx-0 text-amber-200 border-amber-200 hover:bg-amber-200 hover:bg-opacity-10 bg-transparent focus:outline-none w-fit"><svg
-          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-2 w-4 h-4">
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mr-2">
           <path fill-rule="evenodd"
             d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zm5.845 17.03a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V12a.75.75 0 00-1.5 0v4.19l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3z"
             clip-rule="evenodd"></path>
@@ -24,8 +38,17 @@
           </path>
         </svg>Download Resume</button> -->
     </div>
-    <div class="flex justify-center md:justify-start fadein-right"><img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"
-        class="w-45 md:h-auto rounded-full border-4 border-amber-200 pict" src="https://i.ibb.co.com/m6bngRc/Alham-Manazil.png">
+    <div class="flex justify-center md:justify-start fadein-right">
+      <img
+        alt="avatar"
+        fetchpriority="high"
+        width="300"
+        height="300"
+        decoding="async"
+        data-nimg="1"
+        class="border-4 rounded-full w-45 md:h-auto border-amber-200 pict profile-img avatar-glow"
+        src="/img/profile.webp"
+      >
     </div>
   </main>
 </template>
@@ -35,7 +58,7 @@ export default {
   name: 'HomeView',
   data() {
     return {
-      toRotate: ["Web Developer", "Google Cloud Engineer", "Informatics Student", "Tech Enthusiast"],
+      toRotate: ["Web Developer", "Tech Enthusiast", "Lifelong Learner"],
       period: 2000,
       txt: '',
       loopNum: 0,
@@ -91,6 +114,33 @@ body {
   overflow-x: hidden;
 }
 
+/* Animasi ikon sosmed: zoom in/out */
+.sosmed-icon img {
+  transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+  will-change: transform;
+}
+.sosmed-icon:hover img,
+.sosmed-icon:focus img {
+  transform: scale(1.18);
+  box-shadow: 0 4px 24px 0 rgba(255,219,112,0.25);
+}
+.sosmed-icon:active img {
+  transform: scale(0.92);
+}
+
+/* Glow avatar hanya saat hover, dengan efek zoom */
+.pict {
+  border-radius: 50%;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-shadow: none;
+}
+.avatar-glow:hover {
+  box-shadow: 0px 0px 73px -9px rgba(255, 219, 112, 0.44);
+  -webkit-box-shadow: 0px 0px 73px -9px rgba(255, 219, 112, 0.44);
+  -moz-box-shadow: 0px 0px 73px -9px rgba(255, 219, 112, 0.44);
+  transform: scale(1.06);
+}
+
 .typewrite>.wrap {
   border-right: 0.08em solid #fff;
 }
@@ -138,9 +188,21 @@ body {
 }
 
 .pict {
-  box-shadow: 0px 0px 73px -9px rgba(255,219,112,0.44);
--webkit-box-shadow: 0px 0px 73px -9px rgba(255,219,112,0.44);
--moz-box-shadow: 0px 0px 73px -9px rgba(255,219,112,0.44);
+    box-shadow: 0px 0px 73px -9px rgba(255, 219, 112, 0.44);
+    -webkit-box-shadow: 0px 0px 73px -9px rgba(255, 219, 112, 0.44);
+    -moz-box-shadow: 0px 0px 73px -9px rgba(255, 219, 112, 0.44);
+    border-radius: 50%;
+}
+
+/* Tambahkan responsive untuk gambar profil */
+.profile-img {
+  max-width: 160px;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .profile-img {
+    max-width: 300px;
+  }
 }
 
 .fadein-up {

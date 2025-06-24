@@ -73,11 +73,11 @@ export default {
 }
 </script>
 <template>
-  <div class="px-5 py-5 md:px-12 md:py-10 text-left text-amber-50 mx-3">
+  <div class="px-5 py-5 mx-3 text-left md:px-12 md:py-10 text-amber-50">
     <article data-page="about">
       <header>
         <div
-          class="text-2xl font-bold text-white mb-10 fadein-bot title-section flex items-center justify-center flex-col">
+          class="flex flex-col items-center justify-center mb-10 text-2xl font-bold text-white fadein-bot title-section">
           <!-- <div class="h-[1px] w-10 bg-amber-200 md:w-20 aos-init aos-animate"></div> -->
           <h4>Past Project Experience</h4>
           <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-amber-300">
@@ -89,21 +89,21 @@ export default {
           <div class="grid grid-cols-1 gap-4 pb-32 md:grid-cols-3 md:gap-3 xl:grid-cols-3 xl:gap-3 2xl:gap-5 fade-zoom-in">
             <div v-for="item in items" :key="item.id">
               <div
-                class="item-card flex flex-col items-center gap-2 rounded bg-[#1e1e1f] hover:bg-[#282828] border border-[#383838] rounded-xl text-amber-50 md:gap-3 px-5 py-5 lg:px-5 ">
-                <div class="flex h-12 w-12 items-center justify-center p-0 h-full w-full lg:p-0 zoom-in">
-                  <img alt="HTML" loading="lazy" decoding="async" data-nimg="1" class="drop-shadow-xl rounded rounded-xl"
+                class="item-card flex flex-col items-center gap-2 bg-[#1e1e1f] hover:bg-[#282828] border border-[#383838] rounded-xl text-amber-50 md:gap-3 px-5 py-5 lg:px-5 ">
+                <div class="flex items-center justify-center p-0 lg:p-0 zoom-in">
+                  <img alt="HTML" loading="lazy" decoding="async" data-nimg="1" class="drop-shadow-xl rounded-xl"
                     :src="'/img/portfolio-' + item.imageUrl + '.png'">
                 </div>
-                <div class="w-full flex flex-col gap-2 items-center text-sm md:text-base lg:text-lg">
-                  <div class="title-text font-medium text-secondary">{{ item.name }}
+                <div class="flex flex-col items-center w-full gap-2 text-sm md:text-base lg:text-lg">
+                  <div class="font-medium title-text text-secondary">{{ item.name }}
                   </div>
                   <div class="w-full text-left text-[10px] text-[#c1c1c1] md:text-xs lg:text-sm">
                     {{ item.status }}</div>
-                  <div class="w-full mt-4 text-normal text-sm text-left text-amber-200">
+                  <div class="w-full mt-4 text-sm text-left text-normal text-amber-200">
                     {{ item.tech }}
                   </div>
-                  <div class="w-full flex justify-end">
-                    <div class="flex cursor-pointer items-end gap-2 text-primary">
+                  <div class="flex justify-end w-full">
+                    <div class="flex items-end gap-2 cursor-pointer text-primary">
                       <a v-if="item.github !== 'null'"
                         :href="item.github" target="_blank" rel="noreferrer"
                         title="View github repository" class="transition-all hover:text-accent">
