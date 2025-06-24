@@ -27,8 +27,8 @@
                 class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 fadein-bot fadein-2 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 md:p-0">Portfolio</router-link>
             </li>
             <li>
-              <router-link to="/blog"
-                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 fadein-bot fadein-3 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 md:p-0 blog">Blog</router-link>
+              <router-link to="/contact"
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 fadein-bot fadein-3 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 md:p-0 blog">Contact</router-link>
             </li>
           </ul>
         </div>
@@ -44,7 +44,7 @@
     <router-link to="/" class="text-gray-300 hover:text-white">Home</router-link>
     <router-link to="/about" class="text-gray-300 hover:text-white">About</router-link>
     <router-link to="/portfolio" class="text-gray-300 hover:text-white">Portfolio</router-link>
-    <router-link to="/blog" class="text-gray-300 hover:text-white">Blog</router-link>
+    <router-link to="/contact" class="text-gray-300 hover:text-white">Contact</router-link>
   </nav>
 </footer>
 </template>

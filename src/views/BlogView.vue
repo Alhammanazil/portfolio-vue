@@ -1,21 +1,25 @@
 <template>
-  <div class="container p-3 mx-auto md:p-8">
+  <div class="container p-3 mx-auto md:p-8 flex flex-col items-center justify-center min-h-[60vh]">
     <div class="mb-8 text-center text-white">
-      <h2 class="mb-2 text-2xl font-bold">Blog</h2>
-      <p class="text-amber-200">Artikel terbaru saya ada di Medium. Klik judul untuk membaca!</p>
+      <h2 class="mb-2 text-2xl font-bold">Contact</h2>
+      <p class="mb-6 text-amber-200">Silakan hubungi saya melalui form di bawah ini atau lewat media sosial.</p>
     </div>
-    <div class="flex flex-col gap-6 md:px-20">
-      <div v-if="loading" class="text-center text-white">Memuat artikel...</div>
-      <div v-else-if="error" class="text-center text-red-400">{{ error }}</div>
-      <div v-else>
-        <div v-if="articles.length === 0" class="text-center text-white">Belum ada artikel.</div>
-        <div v-for="item in articles" :key="item.guid" class="bg-[#1e1e1f] border-[#383838] rounded-xl text-left text-white p-5 mb-4 hover:bg-[#282828']">
-          <a :href="item.link" target="_blank" rel="noopener" class="block">
-            <div class="mb-1 text-xs italic text-slate-400">{{ new Date(item.pubDate).toLocaleDateString() }}</div>
-            <h1 class="mb-2 font-bold text-md text-amber-200">{{ item.title }}</h1>
-            <div class="text-sm" v-html="item.description"></div>
-          </a>
-        </div>
+    <form
+      @submit.prevent="submitForm"
+      class="w-full max-w-md bg-[#1e1e1f] border-[#383838] rounded-xl text-white p-6 flex flex-col gap-4 shadow-lg"
+    >
+      <input v-model="name" type="text" placeholder="Nama" required class="p-2 rounded bg-[#232324] border border-[#383838]" />
+      <input v-model="email" type="email" placeholder="Email" required class="p-2 rounded bg-[#232324] border border-[#383838]" />
+      <textarea v-model="message" placeholder="Pesan" required class="p-2 rounded bg-[#232324] border border-[#383838]"></textarea>
+      <button type="submit" class="px-4 py-2 font-bold text-black rounded bg-amber-400 hover:bg-amber-300">Kirim</button>
+      <div v-if="success" class="mt-2 text-sm text-green-400">Pesan berhasil dikirim!</div>
+    </form>
+    <div class="mt-8 text-center text-white">
+      <div class="mb-2">Atau hubungi saya di:</div>
+      <div class="flex flex-col items-center gap-2">
+        <a href="mailto:alhammanazil@gmail.com" class="text-amber-300 hover:underline">alhammanazil@gmail.com</a>
+        <a href="https://linkedin.com/in/alhammanazil" target="_blank" class="text-amber-300 hover:underline">LinkedIn</a>
+        <a href="https://github.com/Alhammanazil" target="_blank" class="text-amber-300 hover:underline">GitHub</a>
       </div>
     </div>
   </div>
@@ -25,29 +29,23 @@
 export default {
   data() {
     return {
-      articles: [],
-      loading: true,
-      error: ''
+      name: '',
+      email: '',
+      message: '',
+      success: false,
     }
   },
-  mounted() {
-    const rssUrl = encodeURIComponent('https://medium.com/feed/@alhammanazil18');
-    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`)
-      .then(res => res.json())
-      .then(json => {
-        console.log('rss2json result:', json); // Tambahkan log ini
-        if (json.status === 'ok') {
-          this.articles = json.items;
-        } else {
-          this.error = 'Gagal mengambil artikel dari Medium.';
-        }
-        this.loading = false;
-      })
-      .catch((e) => {
-        this.error = 'Tidak bisa terhubung ke Medium.';
-        this.loading = false;
-        console.error(e);
-      });
+  methods: {
+    submitForm() {
+      // Untuk demo, hanya tampilkan pesan sukses
+      this.success = true;
+      this.name = '';
+      this.email = '';
+      this.message = '';
+      setTimeout(() => {
+        this.success = false;
+      }, 3000);
+    }
   }
 }
 </script>
