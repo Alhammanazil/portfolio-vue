@@ -29,12 +29,12 @@ export default {
             links: [
                 {
                     label: 'Curriculum Vitae',
-                    url: 'https://drive.google.com/file/d/1FMU4oh3SdWD5-8LdZOFasM5Oua3iLQ03/view?usp=sharing',
+                    url: 'https://drive.google.com/file/d/1KpBY-fMK6uj-VPNH6fwConxvofO5f5HG/view?usp=sharing',
                     icon: 'https://img.icons8.com/ios-filled/28/ffdb70/resume-website.png'
                 },
                 {
                     label: 'Portfolio',
-                    url: 'https://drive.google.com/file/d/1yqa9-X5wwMxnw3hdQ3cdZpY4_Adh6nJW/view',
+                    url: 'https://drive.google.com/file/d/11XD46kPKeDlPhuOI3mLHq3R6SS7Ndt_l/view?usp=sharing',
                     icon: 'https://img.icons8.com/ios-filled/28/ffdb70/briefcase.png'
                 },
                 {
