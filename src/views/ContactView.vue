@@ -34,7 +34,7 @@ export default {
                 },
                 {
                     label: 'Portfolio',
-                    url: 'https://drive.google.com/file/d/11XD46kPKeDlPhuOI3mLHq3R6SS7Ndt_l/view?usp=sharing',
+                    url: 'https://drive.google.com/file/d/14IYAupfjLNrdMGAgbseXsXj3E-GHJt7L/view',
                     icon: 'https://img.icons8.com/ios-filled/28/ffdb70/briefcase.png'
                 },
                 {
